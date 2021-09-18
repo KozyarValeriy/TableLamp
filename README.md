@@ -1,6 +1,6 @@
 # TableLamp
 
-![Example](https://github.com/KozyarValeriy/Table-Lamp/blob/master/Exapmle/IMG_20190611_172611.jpg)
+![Example](https://github.com/KozyarValeriy/TableLamp/blob/master/Example/IMG_20190611_172611.jpg)
 Настольная лампа с управлением по Bluetooth.
 За основу взят проект https://github.com/AlexGyver/GyverLight. В моем проекте добавлены несколько новых режимов, также заменено управление с кнопки на управление по Bluetooth. Также добавлена функция сохранения текущего режима работы лампы в энергонезависимую память.
 
