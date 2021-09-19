@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.983,C:\Users\monqp\Documents\Embarcadero\Studio\Projects\Unit2.fmx=C:\Users\monqp\Documents\Embarcadero\Studio\Projects\Bluetooth\Unit2.fmx</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.914,C:\Users\monqp\Documents\Embarcadero\Studio\Projects\Bluetooth.dproj=C:\Users\monqp\Documents\Embarcadero\Studio\Projects\Bluetooth\Bluetooth.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.983,C:\Users\monqp\Documents\Embarcadero\Studio\Projects\Unit2.pas=C:\Users\monqp\Documents\Embarcadero\Studio\Projects\Bluetooth\Unit2.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.383,C:\Users\monqp\Documents\Embarcadero\Studio\Projects\Project2.dproj=C:\Users\monqp\Documents\Embarcadero\Studio\Projects\Bluetooth.dproj</Transaction>
     <Transaction>1899.12.30 00:00:00.000.036,=C:\Users\monqp\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.983,C:\Users\monqp\Documents\Embarcadero\Studio\Projects\Bluetooth\Unit2.fmx=C:\Users\monqp\Documents\Embarcadero\Studio\Projects\Unit2.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.914,C:\Users\monqp\Documents\Embarcadero\Studio\Projects\Bluetooth\Bluetooth.dproj=C:\Users\monqp\Documents\Embarcadero\Studio\Projects\Bluetooth.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.383,C:\Users\monqp\Documents\Embarcadero\Studio\Projects\Bluetooth.dproj=C:\Users\monqp\Documents\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.983,C:\Users\monqp\Documents\Embarcadero\Studio\Projects\Bluetooth\Unit2.pas=C:\Users\monqp\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
-		<NoProfile iOSSimulator="iPhone5" Android="Meizu_M5"/>
+		<NoProfile iOSSimulator="iPhone5" Android="" Android64=""/>
 	</ActiveMobileDevice>
 </BorlandProject>

@@ -13,7 +13,6 @@ type
 
   TForm1 = class(TForm)
     Main_layout: TLayout;
-    ArcDial1: TArcDial;
     Button3: TButton;
     Button4: TButton;
     Button5: TButton;
@@ -49,7 +48,8 @@ type
     Button16: TButton;
     Rectangle1: TRectangle;
     Button1: TButton;
-    Button17: TButton;//кнопка получени€ списка устройств
+    Button17: TButton;  //кнопка получени€ списка устройств
+    TrackBar3: TTrackBar;
     procedure ComboBox1Change(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure TrackBar1Change(Sender: TObject);
@@ -61,7 +61,7 @@ type
     procedure Button6Click(Sender: TObject);
     procedure TrackBar2Change(Sender: TObject);
     procedure Timer2Timer(Sender: TObject);
-    procedure ArcDial1Change(Sender: TObject);
+    //procedure ArcDial1Change(Sender: TObject);
     procedure Timer3Timer(Sender: TObject);
     procedure Button15Click(Sender: TObject);
     procedure Button7Click(Sender: TObject);
@@ -75,6 +75,7 @@ type
     procedure Button16Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button17Click(Sender: TObject);
+    procedure TrackBar3Change(Sender: TObject);
   private
     { Private declarations }
   public
@@ -105,19 +106,19 @@ procedure send(Send_data: string; m: byte);
         end;
     end;
 
-procedure TForm1.ArcDial1Change(Sender: TObject);
-    begin
-        timer2.Enabled := false;
-        bright := ArcDial1.Value;
-        //TrackBar2.Value := prev_bright;
-        //prev_bright := TrackBar2.Value;
-        if ArcDial1.Value >= 0 then
-            label3.text := 'яркость: ' + floattostr(roundto((ArcDial1.Value / 180) * (255 / 2),0))
-        else
-            label3.text := 'яркость: ' + floattostr(roundto((255 / 2 + (1 - abs(ArcDial1.Value) / 180) * (255 / 2)),0));
-        mode := 0;
-        timer2.Enabled := true;
-    end;
+//procedure TForm1.ArcDial1Change(Sender: TObject);
+//    begin
+//        timer2.Enabled := false;
+//        bright := ArcDial1.Value;
+//        //TrackBar2.Value := prev_bright;
+//        //prev_bright := TrackBar2.Value;
+//        if ArcDial1.Value >= 0 then
+//            label3.text := 'яркость: ' + floattostr(roundto((ArcDial1.Value / 180) * (255 / 2),0))
+//        else
+//            label3.text := 'яркость: ' + floattostr(roundto((255 / 2 + (1 - abs(ArcDial1.Value) / 180) * (255 / 2)),0));
+//        mode := 0;
+//        timer2.Enabled := true;
+//    end;
 
 procedure TForm1.Button10Click(Sender: TObject);
     begin
@@ -269,14 +270,8 @@ procedure TForm1.Timer1Timer(Sender: TObject);
 
 procedure TForm1.Timer2Timer(Sender: TObject);
     begin
-        if (bright = ArcDial1.Value) then
-            begin
-                if ArcDial1.Value >= 0 then
-                    bright := (ArcDial1.Value / 180) * (255 / 2)
-                else
-                    bright := 255 / 2 + (1 - abs(ArcDial1.Value) / 180) * (255 / 2);
-                send(floattostr(roundto(bright, 0)), mode);
-            end;
+        if (bright = TrackBar3.Value) then
+            send(floattostr(roundto(bright, 0)), mode);
         timer2.Enabled := false;
     end;
 
@@ -303,6 +298,15 @@ procedure TForm1.TrackBar2Change(Sender: TObject);
         label4.Text := '—корость эффектов: ' + floattostr(roundto(TrackBar2.Value, 0));
         mode := 3;
         timer3.Enabled := true;
+    end;
+
+procedure TForm1.TrackBar3Change(Sender: TObject);
+    begin
+        timer2.Enabled := false;
+        bright := TrackBar3.Value;
+        label3.text := 'яркость: ' + floattostr(roundto(TrackBar3.Value, 0));
+        mode := 0;
+        timer2.Enabled := true;
     end;
 
 end.
